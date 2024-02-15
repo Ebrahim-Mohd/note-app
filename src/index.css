@@ -177,6 +177,9 @@ button:focus-visible {
 .link{
   text-decoration: none;
 }
+.home{
+  margin-bottom:30px;
+}
 .note-details{
   display:flex;
   justify-content: space-between;
@@ -211,6 +214,13 @@ textarea{
 }
 .save-button{
   margin-bottom:80px;
+}
+
+@media (max-width:50em){
+  textarea{
+    width:300px;
+    height:200px;
+  }
 }
 /* Utility classes */
 
