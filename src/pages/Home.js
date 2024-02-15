@@ -3,11 +3,10 @@ import NoteDetails from "../components/NoteDetails"
 const Home = ({collect}) => {
     console.log("Collect in Home:", collect);
     return (
-        <div>
-            <h3>Home</h3>
+        <div className="container">
             {collect.length>0 ? (
                 collect.map((note, index)=>(
-                <NoteDetails key={index} title={note.title} note={note.note}/>)))
+                <NoteDetails key={index} title={note.title} note={note.note} index={index}/>)))
                 :
                 (<p>No notes saved</p>)}
         </div>

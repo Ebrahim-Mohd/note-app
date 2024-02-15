@@ -2,14 +2,18 @@ import { Link } from "react-router-dom"
 
 const Navbar=()=>{
     return (
-        <div>
-            <Link to="/">
-                <h1>note app</h1>
-            </Link>
-            <Link to="/create">
-                <button>New</button>
-            </Link>
-        </div>
+        <header className="primary-header">
+            <div className="container">
+                <div className="nav-wrapper">
+                    <Link to="/" className="link">
+                        <h1 className="fs-primary-heading fw-bold nav-heading">note app</h1>
+                    </Link>
+                    <Link to="/create" className="link">
+                        <button>New</button>
+                    </Link>
+                </div>
+            </div>
+        </header>
     )
 }
 
