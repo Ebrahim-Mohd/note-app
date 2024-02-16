@@ -176,6 +176,7 @@ button:focus-visible {
 }
 .link{
   text-decoration: none;
+  color:rgb(25,25,25)
 }
 .home{
   margin-bottom:30px;
@@ -189,13 +190,36 @@ button:focus-visible {
   margin-bottom:15px;
   padding:40px;
   border-radius:25px;
-  color:rgb(25,25,25)
+  color:rgb(25,25,25);
+}
+.note-link{
+  width:65%;
+  height:100%;
 }
 .create-note{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom:50px;
+}
+.no-saved{
+  font-size: 30px;
+}
+.btn{
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  border-radius: 100vmax;
+  padding: 0.75em 1.25em;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  line-height: 1;
+  color: black;
+  background-color: white;
+  box-shadow: 0 1.125em 1em -1em rgb(60,60,60);
+  margin:5px;
+
 }
 .note-section{
   margin-top:20px;
@@ -221,6 +245,13 @@ textarea{
     width:300px;
     height:200px;
   }
+  .edit-delete{
+    margin-right:-25px;
+  }
+  .no-saved{
+    text-align: center;
+  }
+  
 }
 /* Utility classes */
 

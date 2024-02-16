@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route
           path='/'
-          element={<Home collect={collect}/>}/>
+          element={<Home collect={collect} setCollect={setCollect}/>}/>
           <Route
           path='/create'
           element={<Create collect={collect} setCollect={setCollect}/>}/>
