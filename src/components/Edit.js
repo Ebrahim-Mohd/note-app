@@ -6,6 +6,7 @@ const Edit = ({ collect, setCollect }) => {
 
     const [title, setTitle] = useState('');
     const [note, setNote] = useState('');
+    const [error, setError] = useState('');
 
     useEffect(() => {
         const selectedNote = collect[parseInt(id, 10)]; 
@@ -16,12 +17,17 @@ const Edit = ({ collect, setCollect }) => {
     }, [collect, id]);
 
     const handleEdit = () => {
+        if (!title.trim() || !note.trim()){
+            setError('Title and note cannot be empty')
+            return;
+        }
         const index = parseInt(id, 10);
         if (index >= 0 && index < collect.length) {
             const updatedCollect = [...collect];
             updatedCollect[index] = { title, note };
             setCollect(updatedCollect);
             localStorage.setItem('notes', JSON.stringify(updatedCollect));
+            setError('')
             window.location.href = '/';
 
         } else {
@@ -46,6 +52,7 @@ const Edit = ({ collect, setCollect }) => {
                                 value={note}
                             ></textarea>
                         </div>
+                        {error && <p className='error'>{error}</p>}
                         <button className='save-button' onClick={handleEdit}>Save Changes</button>
                 </div>
             </div>

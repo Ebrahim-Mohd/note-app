@@ -3,8 +3,14 @@ import React, { useState } from 'react';
 const Create = ({ collect, setCollect }) => {
     const [title, setTitle] = useState('');
     const [note, setNote] = useState('');
+    const [error, setError] = useState('');
 
     const handleClick = () => {
+        if (!title.trim() || !note.trim()) {
+            setError('Title and note cannot be empty');
+            return;
+        }
+
         const newNote = { title, note };
 
         setCollect([...collect, newNote]);
@@ -12,6 +18,7 @@ const Create = ({ collect, setCollect }) => {
 
         setTitle('');
         setNote('');
+        setError('');
         window.location.href = '/';
     };
 
@@ -32,6 +39,7 @@ const Create = ({ collect, setCollect }) => {
                             value={note}>
                         </textarea>
                     </div>
+                    {error && <p className='error'>{error}</p>}
                     <button className='save-button' onClick={handleClick}>Save</button>
                 </div>
             </div>

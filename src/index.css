@@ -246,12 +246,20 @@ textarea{
     height:200px;
   }
   .edit-delete{
+    display:flex;
+    flex-direction:column;
     margin-right:-25px;
   }
   .no-saved{
     text-align: center;
   }
   
+}
+
+.error{
+  color:red;
+  position: relative;
+  bottom:6px;
 }
 /* Utility classes */
 
