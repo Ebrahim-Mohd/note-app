@@ -9,7 +9,7 @@ const Navbar=()=>{
                         <h1 className="fs-primary-heading fw-bold nav-heading">note app</h1>
                     </Link>
                     <Link to="/create" className="link">
-                        <button>New</button>
+                        <button className="new-btn">+</button>
                     </Link>
                 </div>
             </div>

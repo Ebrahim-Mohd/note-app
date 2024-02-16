@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Create = ({ collect, setCollect }) => {
     const [title, setTitle] = useState('');
@@ -26,21 +27,24 @@ const Create = ({ collect, setCollect }) => {
         <section className='padding-block-600'>
             <div className='container'>
                 <div className='create-note'>
-                    <label>Title:</label>
                     <input
                         type="text"
+                        placeholder='Title'
                         onChange={(e) => setTitle(e.target.value)}
                         value={title}
                     />
                     <div className='note-section'>
-                        <label>Note:</label>
                         <textarea
+                            placeholder='Note'
                             onChange={(e) => setNote(e.target.value)}
                             value={note}>
                         </textarea>
                     </div>
                     {error && <p className='error'>{error}</p>}
-                    <button className='save-button' onClick={handleClick}>Save</button>
+                    <div className='back-save-btns'>
+                            <Link to="/" className='link'><button className='back-btn'>Back</button></Link>
+                            <button className='save-button' onClick={handleClick}>Save Changes</button>
+                    </div>
                 </div>
             </div>
         </section>

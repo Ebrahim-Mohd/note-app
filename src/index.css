@@ -163,9 +163,36 @@ button:hover,
 button:focus-visible {
   background-color: rgb(225,225,225);
 }
+.new-btn{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  padding:0;
+  display:grid;
+  place-items: center;
+  place-content: center;
+  font-size: var(--fs-700);
+  font-weight: var(--fw-semi-bold);
+}
+.back-btn{
+  background-color:rgb(25,25,255);
+  color: white;
+  padding: 1em 2.25em;
+}
+.save-button{
+  padding: 1em 2.25em;
+}
+.back-btn:hover{
+  background-color: rgb(5,5,205);
+}
+.back-save-btns{
+  display:flex;
+  gap:10px;
+}
 .primary-header {
   padding-top: var(--size-700);
   padding-bottom: var(--size-700);
+  padding-inline:10em;
   margin-bottom: 50px;
   background-color: rgb(184, 115, 51);
 }
@@ -234,12 +261,25 @@ button:focus-visible {
   margin-bottom: 20px;
 }
 input{
+  margin-top: 60px;
   padding-inline:10px;
+  width:1100px;
+  height:45px;
+  border: none;
+  font-size:25px;
+  
 }
 textarea{
-  width:1000px;
+  margin-top:20px;
+  width:1100px;
   height:300px;
   padding:10px;
+  border:none;
+  font-size: 25px;
+  resize:none;
+}
+input:focus, textarea:focus{
+  outline:none;
 }
 .save-button{
   margin-bottom:80px;
@@ -247,8 +287,11 @@ textarea{
 
 @media (max-width:50em){
   textarea{
-    width:300px;
+    max-width:320px;
     height:200px;
+  }
+  input{
+    max-width: 320px;
   }
   .edit-delete{
     display:flex;
@@ -271,7 +314,24 @@ textarea{
   }
   .btn{
     padding: 0.675em 1.05em;
+    display:grid;
+    place-items: center;
+    width:55px;
+    text-align: center;
     font-size: 0.65rem;
+  }
+  .new-btn{
+    width:50px;
+    height:50px;
+  }
+  .primary-header{
+    padding-inline: 4em;
+  }
+  .back-btn{
+    padding: 0.75em 2em;
+  }
+  .save-button{
+    padding: 0.75em 2em;
   }
   
 }

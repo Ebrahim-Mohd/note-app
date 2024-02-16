@@ -1,7 +1,6 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import Home from './pages/Home';
-import Navbar from './components/Navbar';
 import Create from './components/Create';
 import Edit from './components/Edit'
 
@@ -17,7 +16,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
         <Routes>
           <Route
           path='/'
