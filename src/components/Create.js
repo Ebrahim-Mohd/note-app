@@ -43,7 +43,7 @@ const Create = ({ collect, setCollect }) => {
                     {error && <p className='error'>{error}</p>}
                     <div className='back-save-btns'>
                             <Link to="/" className='link'><button className='back-btn'>Back</button></Link>
-                            <button className='save-button' onClick={handleClick}>Save Changes</button>
+                            <button className='save-button' onClick={handleClick}>Save</button>
                     </div>
                 </div>
             </div>
